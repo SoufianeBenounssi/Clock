@@ -631,4 +631,8 @@ footer h1, footer i {
         position: relative;
         left: -120%;
     }
+    
+    #nav-wrap .nav {
+        display: none;
+    }
 }
