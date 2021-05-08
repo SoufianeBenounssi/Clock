@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head><meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Yearupicon.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/99f31869be.js" crossorigin="anonymous"></script>
+    <title>Year Up</title>
+</head>
+<body onload="initClock()">
+    <header id="home">
+        <a href="#home"><img class="Logo" src="YearUp.png" alt="logo"></a>
+        <nav id="nav-wrap">
+            <a href="#nav-wrap" class="mobile-btn" title="Show navigation">Show navigation</a>
+            <a href="nav-wrap" class="mobile-btn" title="Hide navigation">Hide navigation</a>
+
+            <ul id="nav" class="nav">
+                <li class="current"><a href="#home" class="smoothscroll active">Home</a></li>
+                <li><a href="#about" class="smoothscroll">About</a></li>
+                <li><a href="#contact" class="smoothscroll">Contact</a></li>
+            </ul>
+            <ul id="nav1" class="nav1" >
+                <li><a href="https://www.yearup.org/seize-opportunity" class="button" target="blank">Apply here</a></li>
+            </ul>
+        </nav>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <div class="row banner">
+            <div class="eight columns text-col">
+                <div class="banner-text">
+                    <h1 class="responsive-headline">Follow  track of your choice. <br>
+                        Learn the skills. <br>
+                        Start a career.
+                    </h1>
+                    <h3>We help capable young adults enhance their skills and connect them with top companies to push then further into a career and build community. </h3>
+                    
+                    <ul class="social">
+                        <li><a href="https://www.facebook.com/yearup.newyork" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://www.instagram.com/yearup/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://www.linkedin.com/school/year-up/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href="https://twitter.com/YearUp" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="https://www.youtube.com/channel/UCsU3Lh1A7heQPGq10jUx86Q" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+                <span class="scrolldown">
+                    <a href="#about" class="smoothscroll"><i class="fas fa-chevron-circle-down"></i></a>
+                </span>
+            </div>
+            <div class="twelve columns clock">
+                <div class="datetime">
+                    <div class="date">
+                            <span id="dayname">Day</span>,
+                            <span id="month">Month</span>
+                            <span id="daynum">00</span>,
+                            <span id="year">Year</span>
+                    </div>
+                            
+                    <div class="time">
+                            <span id="hour">00</span> :
+                            <span id="minutes">00</span> :
+                            <span id="seconds">00</span>
+                            <span id="period">AM</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+
+    </header>
+
+    <section id="about">
+        <div class="first-half">
+            <div class="description">
+                <h1>What is <strong>YEAR UP</strong></h1>
+            </div>
+            <div class="row">
+                <div class="three columns pic-col">
+                    <img class="students-pic" src="Students.jpg" alt="Students">
+                </div>
+                <div class="eleven columns main-col">
+                    <h2><i class="fas fa-book-open"></i>&nbsp; Learn at Year Up</h2>
+                    <p>Turn one year of training and corporate connections into the career you want.</p>
+                    <br><br><br><br><br><br>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="second-half">
+            <div class="row">
+                <div class="three columns pic-col">
+                    <img class="students-pic" src="Business-man1.jpg" alt="Students">
+                </div>
+                <div class="eleven columns main-col">
+                    <h2><i class="far fa-handshake"></i>&nbsp; Partner with Year Up</h2>
+                    <p>See why forward-thinking business leaders look to us for untapped talent.</p>
+                </div>
+            </div>
+        </div>
+        
+        
+    </section>
+
+    <section id="contact">
+       <h3>Contact Us</h3>
+       <div class="container">
+            <form action="/action_page.php">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name...">
+                
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name...">
+
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" placeholder="Exemple@email.com">
+
+                <label for="city">City</label>
+                <select name="city" id="city">
+                    <option value="New York City, NY">New York City, NY</option>
+                    <option value="Jersey City, NJ">Jersey City, NJ</option>
+                    <option value="Boston, MA">Boston, MA</option>
+                </select>
+
+                <label for="tellmore">Tell us about yourself</label>
+                <textarea name="tellmore" id="tellmore" placeholder="Write something.." style="height: 200px;"></textarea>
+
+                <input type="submit" value="submit">
+            </form>
+       </div>
+    </section>
+
+    <footer>
+        <h1>Soufiane Benounssi &nbsp;<i class="far fa-copyright"></i></h1>
+    </footer>
+
+    
+<script>
+    // Add active class to the current button (highlight it)
+    var header = document.getElementById("nav");
+    var btns = header.getElementsByClassName("smoothscroll");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function() {
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+      });
+    }
+    </script>
+
+
+<script src="Clock.js"></script>
+
+    
+</body>
+</html>
